@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin's Gun Puns</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        #pun-container {
+            text-align: center;
+        }
+        #generate-pun {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #pun {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="pun-container">
+        <button id="generate-pun">Generate Pun</button>
+        <div id="pun"></div>
+    </div>
+
+    <script>
+        const puns = [
+            "Austin's favorite game is target practice, because he never misses a shot at fun!",
+            "When Austin's around, every joke is a real bang-up!",
+            "Austin's favorite dessert? Gun-powdered donuts!",
+            "Austin said he could never be a mime, he just can't stay silent about his guns!",
+            "Why did Austin bring a gun to the bakery? He heard they had some killer deals!",
+            "Austin’s motto: Keep your friends close and your guns closer!",
+            "Austin's favorite movie? The Gunfather.",
+            "Austin started a band, and their biggest hit is 'Shot Through the Heart'!",
+            "Whenever Austin goes to the gym, he always aims for his trigger fingers!",
+            "Austin doesn't just shoot the breeze, he reloads it!"
+        ];
+
+        document.getElementById('generate-pun').addEventListener('click', () => {
+            const randomPun = puns[Math.floor(Math.random() * puns.length)];
+            document.getElementById('pun').innerText = randomPun;
+        });
+    </script>
+</body>
+</html>
